@@ -1,0 +1,106 @@
+---
+import astro from '../assets/skills/astro.svg';
+import firebase from '../assets/skills/firebase.svg';
+import git from '../assets/skills/git.svg';
+import github from '../assets/skills/github.svg';
+import jetpackcompose from '../assets/skills/jetpackcompose.svg';
+import ktor from '../assets/skills/ktor.svg';
+import nextdotjs from '../assets/skills/nextdotjs.svg';
+import react from '../assets/skills/react.svg';
+import sqlite from '../assets/skills/sqlite.svg';
+import swift from '../assets/skills/swift.svg';
+import tailwindcss from '../assets/skills/tailwindcss.svg';
+import postgresql from '../assets/skills/postgresql.svg';
+
+const skills = [
+  { name: "Astro", icon: astro, color: "#FF5D01" },
+  { name: "Firebase", icon: firebase, color: "#FFA000" },
+  { name: "Git", icon: git, color: "#F05032" },
+  { name: "GitHub", icon: github, color: "#181717" },
+  { name: "Jetpack Compose", icon: jetpackcompose, color: "#3DDC84" },
+  { name: "Ktor", icon: ktor, color: "#E7228E" },
+  { name: "Next.js", icon: nextdotjs, color: "#000000" },
+  { name: "React", icon: react, color: "#61DAFB" },
+  { name: "SQLite", icon: sqlite, color: "#003B57" },
+  { name: "Swift", icon: swift, color: "#FA7343" },
+  { name: "Tailwind CSS", icon: tailwindcss, color: "#38BDF8" },
+  { name: "PostgreSQL", icon: postgresql, color: "#336791" },
+];
+---
+
+<section
+    id="about"
+    class="min-h-screen flex flex-col 
+    justify-center items-center text-center 
+    px-4 bg-cover bg-center"
+>
+
+<h1 class="uppercase text-3xl sm:text-3xl md:text-4xl font-extrabold text-black mb-4 mt-15">About Me</h1>
+
+<!-- indicator -->
+<div class="w-16 h-1 bg-slate-500 mb-5"></div>
+
+<!-- Basic description -->
+<p class="text-lg sm:text-xl font-semibold text-gray-950 max-w-2xl mb-10">
+Here you'll find a showcase of what I can do, skills, and experience.
+</p>
+
+<!-- Description -->
+<div class="flex flex-col md:flex-row md:justify-around md:items-start gap-10 max-w-5xl mx-auto px-4">
+    <!-- Get 2 know me -->
+    <div class="w-full md:w-1/2 px-2">
+      <h2 class="text-2xl font-bold w-full text-start mb-7">Get to know me!</h2>
+
+      <!-- Description paragraphs -->
+        <p class="text-base sm:text-sm font-medium text-start text-gray-800 mb-6">
+          I’m a <span class="font-extrabold text-slate-500">Frontend Developer</span> specializing in both <span class="font-extrabold text-slate-500">mobile and web applications</span>. With two years of hands-on experience, I’ve built Android apps from the ground up—designing local data storage with <span class="font-extrabold text-slate-500">Room and SQLite</span>, integrating <span class="font-extrabold text-slate-500">Firebase</span> for real-time syncing, and leveraging <span class="font-extrabold text-slate-500">DataStore</span> and <span class="font-extrabold text-slate-500">Typesafe Navigation</span> to deliver smooth, reliable user experiences.
+        </p>
+
+        <p class="text-base sm:text-sm font-medium text-start text-gray-800 mb-6">
+          Most recently, I’ve expanded into <span class="font-extrabold text-slate-500">cross-platform development</span> using <span class="font-extrabold text-slate-500">Kotlin Multiplatform (KMP)</span>, allowing me to share logic between Android and other targets.
+        </p>
+
+        <p class="text-base sm:text-sm font-medium text-start text-gray-800 mb-6">
+          On the web side, I work daily with <span class="font-extrabold text-slate-500">Next.js</span>, crafting fast, <span class="font-extrabold text-slate-500">SEO-friendly</span> pages and seamless client-side navigation. For Android, I build with <span class="font-extrabold text-slate-500">Jetpack Compose</span>, embracing its declarative UI model, and I’m currently exploring <span class="font-extrabold text-slate-500">Swift</span> to broaden my native development toolkit.
+        </p>
+
+        <p class="text-base sm:text-sm font-medium text-start text-gray-800">
+          I’m open to <span class="font-extrabold text-slate-500">freelance opportunities</span> of all kinds and excited to tackle new challenges that push both my <span class="font-extrabold text-slate-500">skills</span> and the <span class="font-extrabold text-slate-500">product</span> forward.
+        </p>
+
+        <!-- Contact -->
+        <button class="w-full flex justify-start">
+            <a
+                href="#contact"
+                class="bg-slate-800 hover:bg-slate-600 
+                inline-block text-white font-semibold py-2 px-8
+                rounded shadow-lg transition-all duration-500 transform hover:-translate-y-1
+                text-base mt-10"
+            >
+                Contact Me
+            </a>
+        </button>
+    </div>
+
+
+    <!-- skills -->
+    <div class="w-full md:w-1/2 px-2">
+      <h2 class="text-2xl font-bold w-full text-start">My Skills</h2>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 mt-6 mb-20">
+        {skills.map(skill => (
+          <div
+            class="skill flex flex-col items-center justify-center p-4 border rounded-lg transition-transform duration-300 hover:scale-105 hover:shadow-[0_4px_15px_var(--shadow-color)] min-w-20 min-h-28 w-full"
+            style={`--shadow-color: ${skill.color};`}
+          >
+            <skill.icon class="h-12 w-12 mb-3 object-contain" style={`color: ${skill.color}`} />
+            <span class="text-sm font-semibold text-gray-800 text-center object-contain">{skill.name}</span>
+          </div>
+        ))}
+      </div>  
+
+    </div>
+  </div>
+
+
+</section>

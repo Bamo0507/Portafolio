@@ -2,14 +2,23 @@
 
 :root {
   --color-primary: #13474F;
-  --background-color: #eaeaea;
+  --background-color-about: #eaeaea;
+  --background-color-projects: #f0f0f0;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 #about {
-    background-color: var(--background-color);
+    background-color: var(--background-color-about);
 }
 
 .skill {
-    background-color: var(--background-color);
+    background-color: var(--background-color-about);
+}
+
+#projects {
+    background-color: var(--background-color-projects);
 }
 

@@ -30,10 +30,10 @@
         <div class="w-full md:w-1/2 px-2">
         
             <form 
-            method="POST"
-            action="https://formsubmit.co/bryanalbertomo@gmail.com"
-            class="flex flex-col gap-5 w-full"
-            onsubmit="return validateForm()"
+                method="POST"
+                action="https://formsubmit.co/bryanalbertomo@gmail.com"
+                class="flex flex-col gap-5 w-full"
+                onsubmit="return validateForm()"
             >
                 <label for="email" class="text-start font-semibold">Your email address*</label>
                 <input 
@@ -58,15 +58,14 @@
 
                 <button
                     type="submit"
-                    class="relative overflow-hidden bg-gradient-to-r 
-                    from-slate-800 to-slate-700 text-white font-semibold py-2 px-8 
-                    rounded shadow-lg transition-all duration-500 hover:from-slate-500 hover:to-slate-400 
-                    focus:outline-none group"
-                >
-                    <span class="relative z-10 block transition-transform duration-300 group-hover:translate-x-2">
+                    class="relative bg-gradient-to-r from-slate-800 to-slate-700 
+                    hover:from-slate-500 hover:to-slate-400 
+                    text-white font-semibold py-2 px-8 rounded shadow-lg 
+                    transition-all duration-300 focus:outline-none group"
+                    >
+                    <span class="block transition-transform duration-300 group-hover:translate-x-1">
                         Send →
                     </span>
-                    <span class="absolute inset-0 bg-white opacity-10 animate-pulse"></span>
                 </button>
             </form>
 

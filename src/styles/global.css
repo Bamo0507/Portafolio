@@ -4,6 +4,7 @@
   --color-primary: #13474F;
   --background-color-about: #eaeaea;
   --background-color-projects: #f0f0f0;
+  --background-color-contact: #FAFAFA;
 }
 
 html{
@@ -22,3 +23,6 @@ html{
     background-color: var(--background-color-projects);
 }
 
+#contact {
+    background-color: var(--background-color-contact);
+}

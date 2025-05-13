@@ -19,6 +19,8 @@ import projects from '../projectsInfo/projects.js';
       {projects.map(project => (
         <a 
           href={`${project.repository}`} 
+          target="_blank"
+          rel="noopener noreferrer"
           class="relative z-0 rounded-xl overflow-hidden shadow-lg group hover:shadow-2xl transition-all duration-300"
         >
           <img 

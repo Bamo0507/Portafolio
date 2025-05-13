@@ -5,7 +5,7 @@ const projects = [
       repository: "https://github.com/Bamo0507/TripUP",
       description:
         "Plan and explore trips by category or country, and generate itineraries with day-based planning.",
-      tech: ["Kotlin", "Jetpack Compose", "Firebase", "Room", "Datastore"],
+      tech: ["Kotlin", "Jetpack Compose", "Firebase", "Room", "Datastore", "SQLite"],
       imgLocation: "/images/mobile/TripUp.png",
       usability:
         "Users can explore categorized destinations (Hotels, Restaurants, Drinks, Activities), search by country, create multi-day itineraries via form inputs, and view each day as a separate plan card. Users stay signed in thanks to Datastore handling authentication persistence.",
@@ -16,7 +16,7 @@ const projects = [
       repository: "https://github.com/Bamo0507/RickYMorty",
       description:
         "Explore characters and locations from the Rick and Morty API with offline fallback.",
-      tech: ["Jetpack Compose", "Ktor", "Room", "Datastore"],
+      tech: ["Jetpack Compose", "Ktor", "Room", "Datastore", "SQLite"],
       imgLocation: "/images/mobile/RickYMorty.png",
       usability:
         "The app fetches lists of characters and locations. Users can tap entries to view detailed info. If online fetch fails, cached local Room data is used. Datastore keeps users logged in.",
@@ -27,7 +27,7 @@ const projects = [
       repository: "https://github.com/Bamo0507/RecipeApp",
       description:
         "Organize and filter your personal recipe collection with local persistence and image uploads.",
-      tech: ["Jetpack Compose", "Room", "Datastore"],
+      tech: ["Jetpack Compose", "Room", "Datastore", "SQLite"],
       imgLocation: "/images/mobile/MealMap.png",
       usability:
         "Users can add, view, filter (by prep time or favorites), and store recipes with title, description, and time fields. Images can be uploaded from the device gallery.",

@@ -2,28 +2,36 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ master ]
-  workflow_dispatch:
+    branches: [ master ]      # o la rama que uses
+  workflow_dispatch:        # permite disparar manualmente desde la UI
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: read           # para clonar el repo
+  pages: write             # para publicar en GitHub Pages
+  id-token: write          # necesario para el deploy de Pages
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: '20'
-      - run: npm ci
-      - run: npm run build
+          node-version: '20'       # o tu versión preferida
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Astro site
+        run: npm run build
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: dist
+          path: dist              # carpeta generada por astro build
 
   deploy:
     needs: build

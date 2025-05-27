@@ -26,3 +26,124 @@ html{
 #contact {
     background-color: var(--background-color-contact);
 }
+
+@keyframes projectSlideInLeft {
+    from { opacity: 0; transform: translateX(-40px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes projectSlideInRight {
+    from { opacity: 0; transform: translateX(40px); }   
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.project-card {
+  opacity: 0; 
+}
+
+.project-card:nth-child(6n+1) {
+  animation: projectSlideInLeft 0.6s ease-out 0.1s forwards;
+}
+.project-card:nth-child(6n+2) {
+  animation: projectSlideInLeft 0.6s ease-out 0.2s forwards;
+}
+.project-card:nth-child(6n+3) {
+  animation: projectSlideInLeft 0.6s ease-out 0.3s forwards;
+}
+
+.project-card:nth-child(6n+4) {
+  animation: projectSlideInRight 0.6s ease-out 0.1s forwards;
+}
+.project-card:nth-child(6n+5) {
+  animation: projectSlideInRight 0.6s ease-out 0.2s forwards;
+}
+.project-card:nth-child(6n+6) {
+  animation: projectSlideInRight 0.6s ease-out 0.3s forwards;
+}
+
+@keyframes cardFadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.skill-card {
+    opacity: 0;
+    animation: cardFadeInUp 0.6s ease-out forwards;
+}
+/* retrasos automáticos según posición */
+.skill-card:nth-child(1) { animation-delay: 0.1s; }
+.skill-card:nth-child(2) { animation-delay: 0.2s; }
+.skill-card:nth-child(3) { animation-delay: 0.3s; }
+.skill-card:nth-child(4) { animation-delay: 0.4s; }
+.skill-card:nth-child(5) { animation-delay: 0.5s; }
+.skill-card:nth-child(6) { animation-delay: 0.6s; }
+.skill-card:nth-child(7) { animation-delay: 0.7s; }
+.skill-card:nth-child(8) { animation-delay: 0.8s; }
+.skill-card:nth-child(9) { animation-delay: 0.9s; }
+.skill-card:nth-child(10) { animation-delay: 1.0s; }
+.skill-card:nth-child(11) { animation-delay: 1.1s; }
+.skill-card:nth-child(12) { animation-delay: 1.2s; }
+.skill-card:nth-child(13) { animation-delay: 1.3s; }
+.skill-card:nth-child(14) { animation-delay: 1.4s; }
+.skill-card:nth-child(15) { animation-delay: 1.5s; }
+.skill-card:nth-child(16) { animation-delay: 1.6s; }
+
+/* Custom Animations */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.zoom-in {
+  animation: zoomIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.fade-in-left {
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.fade-in-right {
+    animation: fadeInRight 0.8s ease-out forwards;
+}
+
+.footer-gradient {
+    background: linear-gradient(180deg, #202e3f 0%, #171e2d 100%);
+}

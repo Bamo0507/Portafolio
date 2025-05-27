@@ -4,7 +4,11 @@ import projects from '../projectsInfo/projects.js';
 ---
 
 <section id="projects" class="flex flex-col justify-centermax-w-6xl mx-auto px-4 py-16">
-    <h1 class="uppercase text-3xl sm:text-3xl md:text-4xl font-extrabold text-black mb-4 mt-15 mx-auto">Projects</h1>
+    <h1 
+      data-animate="fade-in-up"
+      class="uppercase text-3xl sm:text-3xl md:text-4xl font-extrabold text-black mb-4 mt-15 mx-auto fade-in-up"
+      >Projects
+    </h1>
 
     <!-- indicator -->
     <div class="w-16 h-1 bg-slate-500 mb-5 mx-auto"></div>
@@ -22,6 +26,7 @@ import projects from '../projectsInfo/projects.js';
           target="_blank"
           rel="noopener noreferrer"
           class="relative z-0 rounded-xl overflow-hidden shadow-lg group hover:shadow-2xl transition-all duration-300"
+          data-animate="project-card"
         >
           <img 
             src={project.imgLocation} 

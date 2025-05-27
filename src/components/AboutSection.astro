@@ -11,6 +11,10 @@ import sqlite from '../assets/skills/sqlite.svg';
 import swift from '../assets/skills/swift.svg';
 import tailwindcss from '../assets/skills/tailwindcss.svg';
 import postgresql from '../assets/skills/postgresql.svg';
+import typeorm from '../assets/skills/typeorm.svg';
+import docker from '../assets/skills/docker.svg';
+import kmp from '../assets/skills/kotlin.svg';
+import express from '../assets/skills/express.svg';
 
 const skills = [
   { name: "Astro", icon: astro, color: "#FF5D01" },
@@ -25,6 +29,10 @@ const skills = [
   { name: "Swift", icon: swift, color: "#FA7343" },
   { name: "Tailwind CSS", icon: tailwindcss, color: "#38BDF8" },
   { name: "PostgreSQL", icon: postgresql, color: "#336791" },
+  { name: "TypeORM", icon: typeorm, color: "#FE0803"},
+  { name: "Docker", icon: docker, color: "#2496ED"},
+  { name: "KMP", icon: kmp, color: "#3785db"},
+  { name: "Express", icon: express, color: "#000000"}
 ];
 ---
 
@@ -35,7 +43,11 @@ const skills = [
     px-4 bg-cover bg-center"
 >
 
-  <h1 class="uppercase text-3xl sm:text-3xl md:text-4xl font-extrabold text-black mb-4 mt-15">About Me</h1>
+  <h1 
+  data-animate="fade-in-up"
+  class="uppercase text-3xl sm:text-3xl md:text-4xl font-extrabold text-black mb-4 mt-15 fade-in-up"
+  >About Me
+  </h1>
 
   <!-- indicator -->
   <div class="w-16 h-1 bg-slate-500 mb-5"></div>
@@ -46,14 +58,19 @@ const skills = [
   </p>
 
   <!-- Description -->
-  <div class="flex flex-col md:flex-row md:justify-around md:items-start gap-10 max-w-5xl mx-auto px-4">
+  <div class="flex flex-col md:flex-row md:justify-around md:items-start gap-10 max-w-5xl mx-auto px-4 items-center">
       <!-- Get 2 know me -->
       <div class="w-full md:w-1/2 px-2">
-        <h2 class="text-2xl font-bold w-full text-start mb-7">Get to know me!</h2>
+        <h2 
+        data-animate="fade-in-left"
+        class="text-2xl font-bold w-full text-start mb-7 fade-in-left"
+        >
+        Get to know me!
+      </h2>
 
         <!-- Description paragraphs -->
           <p class="text-base sm:text-sm font-medium text-start text-gray-800 mb-6">
-            I’m a <span class="font-extrabold text-slate-500">Frontend Developer</span> specializing in both <span class="font-extrabold text-slate-500">mobile and web applications</span>. With two years of hands-on experience, I’ve built Android apps from the ground up—designing local data storage with <span class="font-extrabold text-slate-500">Room and SQLite</span>, integrating <span class="font-extrabold text-slate-500">Firebase</span> for real-time syncing, and leveraging <span class="font-extrabold text-slate-500">DataStore</span> and <span class="font-extrabold text-slate-500">Typesafe Navigation</span> to deliver smooth, reliable user experiences.
+            I'm a <span class="font-extrabold text-slate-500">Frontend Developer</span> specializing in both <span class="font-extrabold text-slate-500">mobile and web applications</span>. With two years of hands-on experience, I’ve built Android apps from the ground up—designing local data storage with <span class="font-extrabold text-slate-500">Room and SQLite</span>, integrating <span class="font-extrabold text-slate-500">Firebase</span> for real-time syncing, and leveraging <span class="font-extrabold text-slate-500">DataStore</span> and <span class="font-extrabold text-slate-500">Typesafe Navigation</span> to deliver smooth, reliable user experiences.
           </p>
 
           <p class="text-base sm:text-sm font-medium text-start text-gray-800 mb-6">
@@ -67,6 +84,9 @@ const skills = [
           <p class="text-base sm:text-sm font-medium text-start text-gray-800">
             I’m open to <span class="font-extrabold text-slate-500">freelance opportunities</span> of all kinds and excited to tackle new challenges that push both my <span class="font-extrabold text-slate-500">skills</span> and the <span class="font-extrabold text-slate-500">product</span> forward.
           </p>
+
+          <!-- Spacer -->
+          <div class="h-10"></div>
 
           <!-- Contact -->
           <button class="w-full flex justify-start">
@@ -85,11 +105,16 @@ const skills = [
 
       <!-- skills -->
       <div class="w-full md:w-1/2 px-2">
-        <h2 class="text-2xl font-bold w-full text-start">My Skills</h2>
+        <h2 
+        data-animate="fade-in-right"
+        class="text-2xl font-bold w-full text-start fade-in-right"
+        >My Skills
+      </h2>
 
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 mt-6 mb-20">
           {skills.map(skill => (
             <div
+              data-animate="skill-card"
               class="skill flex flex-col items-center justify-center p-4 border rounded-lg transition-transform duration-300 hover:scale-105 hover:shadow-[0_4px_15px_var(--shadow-color)] min-w-20 min-h-28 w-full"
               style={`--shadow-color: ${skill.color};`}
             >
@@ -101,6 +126,4 @@ const skills = [
 
       </div>
   </div>
-
-
 </section>

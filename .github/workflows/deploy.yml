@@ -2,13 +2,13 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ master ]      # o la rama que uses
-  workflow_dispatch:        # permite disparar manualmente desde la UI
+    branches: [master]
+  workflow_dispatch:
 
 permissions:
-  contents: read           # para clonar el repo
-  pages: write             # para publicar en GitHub Pages
-  id-token: write          # necesario para el deploy de Pages
+  contents: read          # Necesario para clonar el repo
+  pages: write            # Necesario para publicar en Pages
+  id-token: write         # Necesario para autenticación de Pages
 
 jobs:
   build:
@@ -20,7 +20,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'       # o tu versión preferida
+          node-version: 20  # o la versión que uses en tu proyecto
 
       - name: Install dependencies
         run: npm ci
@@ -28,10 +28,10 @@ jobs:
       - name: Build Astro site
         run: npm run build
 
-      - name: Upload Pages artifact
+      - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: dist              # carpeta generada por astro build
+          path: dist  # Carpeta generada por Astro
 
   deploy:
     needs: build

@@ -3,13 +3,13 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main      # o la rama que uses
-  workflow_dispatch:
+      - main        # o la rama que uses
+  workflow_dispatch:  # para poder dispararlo manualmente
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: read      # para leer el repo
+  pages: write        # para escribir en Pages
+  id-token: write     # necesario para deploy-pages
 
 jobs:
   build:
@@ -30,10 +30,9 @@ jobs:
         run: npm run build
 
       - name: Upload Pages artifact
-        # Esta acción empaca tu carpeta `dist/` para el siguiente job
         uses: actions/upload-pages-artifact@v1
         with:
-          path: dist       # aquí debe apuntar a tu carpeta generada  [oai_citation:0‡GitHub](https://github.com/marketplace/actions/deploy-github-pages-site?utm_source=chatgpt.com)
+          path: ./dist    # aquí tu carpeta generada por `astro build`
 
   deploy:
     needs: build
